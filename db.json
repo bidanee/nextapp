@@ -16,14 +16,34 @@
       "id": 3
     },
     {
-      "title": "javascript",
-      "body": "javascript is...",
+      "title": "Javascript",
+      "body": "Javascript is...",
       "id": 4
     },
     {
       "title": "react",
       "body": "react is...",
       "id": 5
+    },
+    {
+      "title": "next",
+      "body": "123",
+      "id": 6
+    },
+    {
+      "title": "js",
+      "body": "jsss",
+      "id": 7
+    },
+    {
+      "title": "왜?",
+      "body": "아니야?",
+      "id": 10
+    },
+    {
+      "title": "되는건가",
+      "body": "서버>?",
+      "id": 11
     }
   ],
   "posts": [

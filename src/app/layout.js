@@ -1,4 +1,5 @@
 //기본적인 웹 페이지 골격 구성
+import { Control } from "./Control";
 import "./globals.css";
 import Link from "next/link";
 
@@ -8,7 +9,9 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
-  const res = await fetch("http://localhost:9999/topics");
+  const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "topics", {
+    cache: "no-store",
+  }); // 성능 저하...
   const topics = await res.json();
 
   return (
@@ -27,17 +30,7 @@ export default async function RootLayout({ children }) {
           })}
         </ol>
         {children}
-        <ul>
-          <li>
-            <a href="/create">Create</a>
-          </li>
-          <li>
-            <a href="/update/1">Update</a>
-          </li>
-          <li>
-            <input type="button" value="delete" />
-          </li>
-        </ul>
+        <Control />
       </body>
     </html>
   );
